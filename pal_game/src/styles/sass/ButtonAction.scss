@@ -1,0 +1,39 @@
+$color-button: #518186;
+// mass = weight and tall = height
+@mixin wAndH($mass:100px, $tall:100px) {
+    width: $mass;
+    height: $tall;
+}
+
+.contain-button {
+    @include wAndH(400px, 400px);
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: $color-button;
+    background-color: #B1CFD2;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid yellow;
+    border-radius: 20px;
+}
+
+.button-start {
+    @include wAndH(200px, 150px);
+    border-radius: 10px;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    &:hover {
+        background-color: #3e939a;
+        -webkit-box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+        box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+    }
+}
+
+.title-start-button {
+    font-size: 24px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
