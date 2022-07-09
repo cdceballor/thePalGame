@@ -5,14 +5,18 @@ $color-button: #518186;
     height: $tall;
 }
 
-.contain-button {
-    @include wAndH(400px, 400px);
+@mixin center-element($topValue:50%, $leftValue:50%) {
     display: flex;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: $topValue;
+    left: $leftValue;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.contain-button {
+    @include wAndH(400px, 400px);
+    @include center-element(50%, 50%);
     background-color: $color-button;
     background-color: #B1CFD2;
     justify-content: center;
@@ -36,4 +40,18 @@ $color-button: #518186;
 .title-start-button {
     font-size: 24px;
     font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.name-game {
+    @include center-element(65%, 50%);
+    height: 25px;
+    border: 1px solid;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.palindrome-title {
+    @include center-element(25%, 50%);
+    z-index: 1;
 }

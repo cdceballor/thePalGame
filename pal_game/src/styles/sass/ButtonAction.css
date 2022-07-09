@@ -33,4 +33,28 @@
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
+.name-game {
+  display: flex;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 25px;
+  border: 1px solid;
+  border-radius: 12px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.palindrome-title {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
 /*# sourceMappingURL=ButtonAction.css.map */
