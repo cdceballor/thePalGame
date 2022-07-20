@@ -1,0 +1,26 @@
+.header-container {
+  padding: 15px;
+  margin: 10px;
+  background-color: rgb(205, 199, 199);
+  border-radius: 10px;
+}
+
+.initial-title {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.number-pokemon {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container-pokemon {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  text-align: center;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=ConsumingFirstSlice.css.map */
