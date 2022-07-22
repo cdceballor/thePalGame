@@ -19,7 +19,7 @@ export const ConsumingThirdSlice = () => {
 
       {isLoading ? (
         <h1>Loading</h1>
-      ) : data.length == 0 ? (
+      ) : data.length === 0 ? (
         <h4>Not data</h4>
       ) : (
         <div>
