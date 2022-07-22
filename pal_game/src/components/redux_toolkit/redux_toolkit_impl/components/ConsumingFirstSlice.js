@@ -22,8 +22,8 @@ export const ConsumingFirstSlice = () => {
           <h4> Loading </h4>
         ) : (
           <>
-            {pokeData.results.map((pokemon) => {
-              return <p> {pokemon?.name} </p>;
+            {pokeData.results.map((pokemon, index) => {
+              return <p key={index}> {pokemon?.name} </p>;
             })}
           </>
         )}

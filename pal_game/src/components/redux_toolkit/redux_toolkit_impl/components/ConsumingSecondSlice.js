@@ -7,25 +7,28 @@ export const ConsumingSecondSlice = () => {
   const [pokeName, setPokeName] = useState("");
   const dispatch = useDispatch();
 
-  const { pokeDataSecond, loading } =
+  const { pokeDataSecond } =
     useSelector((state) => state.pokeReducerSS);
 
-  console.log(pokeDataSecond)
   return (
     <div className="container-header">
+      <div className="header-con">
       <input className="input-pokemon" onChange={(e) => { setPokeName(e.target.value); }} type="text" />
-      <button className="fetch-pokemon" onClick={() =>
+      <button className="fetch-button-pokemon" onClick={() =>
           dispatch( getPokemonByNameAsync( "https://pokeapi.co/api/v2/pokemon/", pokeName ) ) }>
         Search a pokemon using useState
       </button>
-      {pokeDataSecond.length == 0 ? <h2>There is no data</h2> :
-        <>
+            </div>
+      {pokeDataSecond.length == 0 ? <h2>Give me a poke name!</h2> :
+        pokeDataSecond == "Error in the name" ?
+          <h3>Error in the name, try again with other name</h3>:
+        <div className="card-container">
           <h3> Pokemon name: {pokeDataSecond?.name} </h3>
           {pokeDataSecond.abilities.map((pokemon) => {
            return (<p> Ability name: {pokemon?.ability?.name} </p>)
          })}
           <img src={pokeDataSecond?.sprites?.front_default} alt="img" />
-        </>
+        </div>
       }
     </div>
   );

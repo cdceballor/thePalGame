@@ -12,7 +12,7 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/game" element={<Game />} />
         <Route path="/dice-game" element={<Dice />} />
-      <Route path="/redux-toolkit" element={<ReduxToolkit name={"bulbasaur"} />} />
+      <Route path="/redux-toolkit" element={<ReduxToolkit />} />
       </Routes>
     </BrowserRouter>
   );

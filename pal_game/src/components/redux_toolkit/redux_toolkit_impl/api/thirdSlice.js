@@ -24,5 +24,5 @@ export const apiUser = createApi({
     }),
 })
 
-export const { useGetPokemonByNameQuery } = pokemonApi
+export const { useGetPokemonByNameQuery } = pokemonApi;
 export const { useGetUserByIdQuery } = apiUser;
